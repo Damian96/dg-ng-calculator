@@ -26,11 +26,13 @@ export class CalculatorComponent {
       return;
     }
     try {
-      this.result = eval(this.result);
-      this.result = this.result.toString();
-      if (typeof this.result !== 'number') {
+      this.result = this.result.replace(/\s/g, '');
+      if (this.result.includes('/0')) {
         this.result = '';
         throw new Error('An error occured when calculating the result.');
+      } else {
+        this.result = eval(this.result);
+        this.result = this.result.toString();
       }
     } catch (error) {
       alert(error);
