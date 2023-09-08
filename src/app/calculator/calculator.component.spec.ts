@@ -41,6 +41,12 @@ describe('CalculatorComponent', () => {
     expect(component.result).toBe('14');
   });
 
+  it('should format the number when calculating', () => {
+    component.result = '2 * 1000';
+    component.calculateResult();
+    expect(component.result).toBe('2,000');
+  });
+
   it('should handle division by zero', () => {
     component.result = '5 / 0';
     component.calculateResult();

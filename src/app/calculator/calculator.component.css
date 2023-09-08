@@ -1,4 +1,32 @@
 #the-result {
   font-size: x-large;
   text-align: center;
+  font-weight: bolder;
+}
+
+.operator, .function {
+  color: darkorange;
+  font-size: larger;
+  font-weight: bold;
+}
+
+button.btn {
+  background-color: white;
+}
+
+#btn-calc span {
+  display: block;
+  margin: auto;
+
+  background-color: darkorange;
+  border-radius: 50%;
+  color: white;
+  width: 35px;
+  height: 35px;
+
+
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
 }

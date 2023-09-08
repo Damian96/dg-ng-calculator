@@ -3,32 +3,38 @@
     <input id="the-result" type="text" [(ngModel)]="result" disabled />
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="clearResult()">AC</button>
-    <button class="col" type="button" (click)="deleteLast()">DELETE</button>
+    <button class="col function btn btn-light" type="button" (click)="clearResult()">AC</button>
+    <button class="col function btn btn-light" type="button" (click)="deleteLast()">DELETE</button>
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="appendOperator('+')">+</button>
-    <button class="col" type="button" (click)="appendOperator('-')">-</button>
-    <button class="col" type="button" (click)="appendOperator('*')">×</button>
-    <button class="col" type="button" (click)="appendOperator('/')">÷</button>
+    <button class="col operator btn btn-light" type="button" (click)="appendOperator('+')">+</button>
+    <button class="col operator btn btn-light" type="button" (click)="appendOperator('-')">-</button>
+    <button class="col operator btn btn-light lead" type="button" (click)="appendOperator('*')">×</button>
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="appendToScreen('7')">7</button>
-    <button class="col" type="button" (click)="appendToScreen('8')">8</button>
-    <button class="col" type="button" (click)="appendToScreen('9')">9</button>
+    <button class="col operator btn btn-light" type="button" (click)="appendOperator('/')">÷</button>
+    <button class="col operator btn btn-light" type="button" (click)="appendOperator('%')">%</button>
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="appendToScreen('4')">4</button>
-    <button class="col" type="button" (click)="appendToScreen('5')">5</button>
-    <button class="col" type="button" (click)="appendToScreen('6')">6</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('7')">7</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('8')">8</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('9')">9</button>
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="appendToScreen('1')">1</button>
-    <button class="col" type="button" (click)="appendToScreen('2')">2</button>
-    <button class="col" type="button" (click)="appendToScreen('3')">3</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('4')">4</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('5')">5</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('6')">6</button>
   </div>
   <div class="row">
-    <button class="col" type="button" (click)="appendToScreen('0')">0</button>
-    <button class="col" type="button" class="lead" (click)="calculateResult()">=</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('1')">1</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('2')">2</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('3')">3</button>
+  </div>
+  <div class="row">
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('0')">0</button>
+    <button class="col btn btn-light" type="button" (click)="appendToScreen('.')">.</button>
+    <button id="btn-calc" class="col btn btn-light lead" type="button" (click)="calculateResult()">
+      <span>=</span>
+    </button>
   </div>
 </div>
